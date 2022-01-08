@@ -71,12 +71,12 @@ export default class TransactionScreen extends React.Component {
     //   transactionType: "Issue"
     // });
 
-    // db.collection("transactions").add({
-    //   studentId: this.state.scannedStudentId,
-    //   cycleId: this.state.scannedCycleId,
-    //   date: firebase.firestore.Timestamp.now().toDate(),
-    //   transactionType: "Issue"
-    // });
+    db.collection("transactions").add({
+      studentId: this.state.scannedStudentId,
+      cycleId: this.state.scannedCycleId,
+      date: firebase.firestore.Timestamp.now().toDate(),
+      transactionType: "Issue"
+    });
 
     // db.collection("transactions").({
     //   studentId: this.state.scannedStudentId;
@@ -150,10 +150,10 @@ export default class TransactionScreen extends React.Component {
     //   scannedCycleId: 
     // });
 
-    // this.setState({
-    //   scannedStudentId: "",
-    //   scannedCycleId: ""
-    // });
+    this.setState({
+      scannedStudentId: "",
+      scannedCycleId: ""
+    });
 
      // this.state({
     //   scannedStudentId: "",
